@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container-fluid {
+    display: flex;
+    height: 100vh;
+    margin:  0px;
+    padding: 0px;
+}
+
+.left-section {
+    flex: 2; /* Left section takes up half the width */
+    padding: 70px 30px; 
+    border-right: 1px solid #ddd;
+    background-image: url(../images/bg.jpg);
+    margin: 0%;
+}
+
+.left-section h4{
+    margin: 0px;
+}
+
+.upload-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.upload-container input[type="file"] {
+    display: none;
+}
+
+.upload-container label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+}
+
+.upload-container label span {
+    font-size: 2em;
+}
+
+.uploaded-images {
+    /* margin-left: 20px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.uploaded-images img {
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.upload-button-container {
+    width: 75px; 
+    height: 75px; 
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section {  
+    flex: 3; /* Right section takes up half the width */
+    padding: 50px;
+    overflow: hidden; /* Hide overflow for iframe */
+}
+
+.right-section iframe {
+    width: 100%;
+    height: calc(100vh - 100px); /* Account for padding */
+    border: none;
+}
+
+#stitch-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.col{
+    align-content: center;
+}
+
+.iframe-buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+}
+
+.download-btn,
+.refresh-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.download-btn:hover,
+.refresh-btn:hover {
+    background-color: #ddd;
+}
+
+#delete-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delete-button:hover {
+    background-color: #ddd;
+}
+
+.drop-placeholder {
+    background-color: lightgray;
+    border: 2px dashed #999; /* Adding dashed border for visual indication */
+    height: 75px; /* Adjust placeholder height as needed */
+    width: 75px;
+    margin: 5px; /* Add margin bottom for spacing */
+    border-radius: 5px;
+}
+
+#stitched-image {
+    width: 100%; /* Adjust the width of the div as needed */
+    height: 100%; /* Adjust the height of the div as needed */
+    background-color: rgba(196, 205, 230, 0.245); 
+    border-radius: 25px;
+    
+}
+
+.stitched-image {
+    max-width: 100%; /* Adjust the maximum width of the image */
+    max-height: 100%; /* Adjust the maximum height of the image */
+    display: block; /* Ensures that the image is displayed as a block element */
+    margin: auto; /* Centers the image horizontally */
+    
+}
